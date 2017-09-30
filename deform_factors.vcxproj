@@ -112,8 +112,8 @@ XCOPY "$(SolutionDir)assets\*" "$(TargetDir)" /D /K /Y</Command>
       <AdditionalDependencies>d3d12.lib;dxgi.lib;d3dcompiler.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <CustomBuildStep>
-      <Command>XCOPY "$(SolutionDir)lib\*.dll" "$(TargetDir)" /D /K /Y
-XCOPY "$(SolutionDir)assets\*" "$(TargetDir)" /D /K /Y</Command>
+      <Command>
+      </Command>
     </CustomBuildStep>
     <PostBuildEvent>
       <Command>XCOPY "$(SolutionDir)lib\*.dll" "$(TargetDir)" /D /K /Y
@@ -156,8 +156,8 @@ XCOPY "$(SolutionDir)assets\*" "$(TargetDir)" /D /K /Y</Command>
       <AdditionalDependencies>d3d12.lib;dxgi.lib;d3dcompiler.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <CustomBuildStep>
-      <Command>XCOPY "$(SolutionDir)lib\*.dll" "$(TargetDir)" /D /K /Y
-XCOPY "$(SolutionDir)assets\*" "$(TargetDir)" /D /K /Y</Command>
+      <Command>
+      </Command>
     </CustomBuildStep>
     <PostBuildEvent>
       <Command>XCOPY "$(SolutionDir)lib\*.dll" "$(TargetDir)" /D /K /Y
