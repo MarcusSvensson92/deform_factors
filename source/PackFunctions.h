@@ -176,14 +176,14 @@ namespace Pack
 
             // Convert the cartesian vectors to spherical coordinates
             float sx = atan2f( ty, tx ) / 3.14159265f;
-            float sy = tz;
+            float sy = acosf( tz ) / 3.14159265f;
             float sz = atan2f( by, bx ) / 3.14159265f;
-            float sw = bz;
+            float sw = acosf( bz ) / 3.14159265f;
 
             sx = sx * 0.5f + 0.5f;
-            sy = sy * 0.25f + 0.75f;
+            sy = sy * 0.5f + 0.5f;
             sz = sz * 0.5f + 0.5f;
-            sw = sw * 0.25f + 0.75f;
+            sw = sw * 0.5f + 0.5f;
             
             // Convert from float scale to integer scale
             sx = sx * 255.f + 0.5f;

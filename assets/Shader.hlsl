@@ -41,13 +41,13 @@ float3 UnpackRGBMSigned( float4 rgbm, float q )
 
 float UnpackTangents( float4 tangents, out float3 tangent, out float3 bitangent )
 {
-    tangents = tangents * 2.0 - 1.0;
+    tangents = tangents * ( 2.0 * 3.14159265 ) - 3.14159265;
 
-    float2 sin_theta, cos_theta;
-    sincos( tangents.x * 3.14159265, sin_theta.x, cos_theta.x );
-    sincos( tangents.z * 3.14159265, sin_theta.y, cos_theta.y );
-    float2 cos_phi = abs( tangents.yw ) * 2.0 - 1.0;
-    float2 sin_phi = sqrt( 1.0 - cos_phi * cos_phi );
+    float2 sin_theta, cos_theta, cos_phi, sin_phi;
+    sincos( tangents.x, sin_theta.x, cos_theta.x );
+    sincos( tangents.z, sin_theta.y, cos_theta.y );
+    sincos( abs( tangents.y ), sin_phi.x, cos_phi.x );
+    sincos( abs( tangents.w ), sin_phi.y, cos_phi.y );
 
     tangent   = float3( cos_theta.x * sin_phi.x, sin_theta.x * sin_phi.x, cos_phi.x );
     bitangent = float3( cos_theta.y * sin_phi.y, sin_theta.y * sin_phi.y, cos_phi.y );
