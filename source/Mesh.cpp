@@ -428,7 +428,7 @@ CMesh* LoadMesh( const char* filepath )
                         {
                             DirectX::XMVECTOR e2 = DirectX::XMVectorSubtract( positions[ ( m + 1 ) % 3 ], positions[ m ] );
                             DirectX::XMVECTOR e3 = DirectX::XMVectorSubtract( positions[ ( m + 2 ) % 3 ], positions[ m ] );
-                            float wedge_angle = DirectX::XMVectorGetX( DirectX::XMVector3AngleBetweenVectors( e1, e2 ) ) * triangle_area;
+                            float wedge_angle = DirectX::XMVectorGetX( DirectX::XMVector3AngleBetweenVectors( e2, e3 ) ) * triangle_area;
 
                             DirectX::XMVECTOR tangent = DirectX::XMLoadFloat3( mesh->Tangents + indices[ m ] );
                             DirectX::XMVECTOR bitangent = DirectX::XMLoadFloat3( mesh->Bitangents + indices[ m ] );
