@@ -13,6 +13,7 @@ An implementation of a technique presented in the paper ["Accurate and Efficient
 ## Externals
 
 * [DirectX 12](https://msdn.microsoft.com/en-us/library/windows/desktop/dn903821(v=vs.85).aspx)
+* [Assimp](http://www.assimp.org/)
 * [Unity Technologies](https://www.assetstore.unity3d.com/en/#!/content/39924) - The sample model is taken from the assets in "The Blacksmith"
 
 ## Notes
